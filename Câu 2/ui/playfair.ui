@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayfairWindow</class>
+ <widget class="QWidget" name="PlayfairWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Playfair Cipher - Mã hoá &amp; Giải mã</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>PLAYFAIR CIPHER</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 20px; font-weight: bold; color: #2c3e50; padding: 8px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="keyLayout">
+     <item>
+      <widget class="QLabel" name="keyLabel">
+       <property name="text">
+        <string>Khoá (Key):</string>
+       </property>
+       <property name="minimumWidth">
+        <number>110</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="keyLineEdit">
+       <property name="placeholderText">
+        <string>Nhập khoá, ví dụ: MONARCHY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="setKeyButton">
+       <property name="text">
+        <string>Đặt khoá</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #8e44ad; color: white; font-weight: bold; padding: 6px 12px; border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="matrixLabel">
+     <property name="text">
+      <string>Ma trận khoá 5x5:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="matrixDisplay">
+     <property name="maximumHeight">
+      <number>110</number>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string>font-family: Consolas, monospace; font-size: 14px; background-color: #f4f6f7;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="inputLabel">
+     <property name="text">
+      <string>Văn bản đầu vào (Plaintext / Ciphertext):</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="inputTextEdit">
+     <property name="maximumHeight">
+      <number>90</number>
+     </property>
+     <property name="placeholderText">
+      <string>Nhập văn bản cần mã hoá hoặc giải mã...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="encryptButton">
+       <property name="text">
+        <string>Mã hoá (Encrypt)</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #27ae60; color: white; font-weight: bold; padding: 8px; border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="decryptButton">
+       <property name="text">
+        <string>Giải mã (Decrypt)</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #2980b9; color: white; font-weight: bold; padding: 8px; border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearButton">
+       <property name="text">
+        <string>Xoá (Clear)</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #c0392b; color: white; font-weight: bold; padding: 8px; border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="outputLabel">
+     <property name="text">
+      <string>Kết quả:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="outputTextEdit">
+     <property name="maximumHeight">
+      <number>90</number>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string>background-color: #fdfefe; font-family: Consolas, monospace; font-size: 13px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string></string>
+     </property>
+     <property name="styleSheet">
+      <string>color: #7f8c8d; font-style: italic;</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
